@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import Image from "next/image";
 
 const earlyWorks = [
   {
@@ -55,7 +56,16 @@ const inProgress = [
 ];
 
 export default function Projects() {
-  const [selectedProject, setSelectedProject] = useState<any>(null);
+  type Project = {
+    title: string;
+    description: string;
+    image: string;
+    tech?: string[];
+    live?: string;
+    code?: string;
+    inProgress?: boolean;
+  };
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
     <section
@@ -85,9 +95,11 @@ export default function Projects() {
                 className='flex flex-col items-center text-center 
                 bg-white/5 dark:bg-white/10 backdrop-blur-md rounded-xl 
                 shadow-lg p-6'>
-                <img
+                <Image
                   src={project.image}
                   alt={project.title}
+                  width={600}
+                  height={400}
                   className='w-full h-64 object-cover rounded-lg mb-4 
                   border border-gray-700'
                 />
@@ -123,9 +135,11 @@ export default function Projects() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}>
             <div className='flex-1'>
-              <img
+              <Image
                 src={project.image}
                 alt={project.title}
+                width={600}
+                height={400}
                 className='w-full h-72 object-cover rounded-xl shadow-2xl 
                 border border-gray-700'
               />
@@ -164,9 +178,11 @@ export default function Projects() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}>
             <div className='flex-1 relative'>
-              <img
+              <Image
                 src={project.image}
                 alt={project.title}
+                width={600}
+                height={400}
                 className='w-full h-72 object-cover rounded-xl shadow-2xl 
                 border border-gray-700 opacity-90'
               />

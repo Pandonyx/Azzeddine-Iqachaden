@@ -39,16 +39,6 @@ export default function About() {
         viewport={{ once: true }}
       />
 
-      <motion.img
-        src='/about/about-bottom.png'
-        alt='About Bottom'
-        className='absolute bottom-0 left-1/2 -translate-x-1/2 w-1/3 max-w-xs opacity-0'
-        initial={{ y: 120, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1, delay: 1.2 }}
-        viewport={{ once: true }}
-      />
-
       {/* Content */}
       <motion.div
         className='max-w-3xl text-center p-8 rounded-2xl 
