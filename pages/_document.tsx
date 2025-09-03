@@ -34,11 +34,11 @@ export default function Document() {
         />
         <meta
           property='og:url'
-          content='https://yourdomain.com'
+          content='https://azzeddine-iqachaden.vercel.app/'
         />
         <meta
           property='og:image'
-          content='https://yourdomain.com/og-image.png'
+          content='./public/image.png'
         />
 
         {/* Twitter Card */}
@@ -56,7 +56,7 @@ export default function Document() {
         />
         <meta
           name='twitter:image'
-          content='https://yourdomain.com/twitter-card.png'
+          content='./public/image.png'
         />
         <link
           rel='icon'
