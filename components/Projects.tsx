@@ -59,7 +59,8 @@ const inProgress = [
     title: "Library Management System (In Progress)",
     description:
       "A system to manage books, members, and loans, with admin dashboards.",
-    image: "/image.png",
+    image: "/projects/libms.jpg",
+    tech: ["Next.js", "Django",
     inProgress: true,
   },
 ];
