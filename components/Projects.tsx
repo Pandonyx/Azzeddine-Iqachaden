@@ -34,23 +34,32 @@ const projects = [
     live: "https://elegantdining.vercel.app/",
     code: "https://github.com/Pandonyx/restaurantwebsitebasicstack",
   },
+  {
+    title: "ALX Listing App",
+    description:
+      "A listings application showcasing deployed functionality and clean UI.",
+    image: "/projects/airbnbclone.png",
+    tech: ["Next.js", "TypeScript", "Tailwind"],
+    live: "https://alx-listing-app-deployed-muso93de7-pandonyxs-projects.vercel.app",
+    code: "https://github.com/Pandonyx/alx-listing-app-deployed",
+    openInNewTab: true,
+  },
 ];
 
 const inProgress = [
-  {
-    title: "Airbnb Clone (In Progress)",
-    description:
-      "An ambitious Airbnb clone with authentication, listings, and booking functionality.",
-    image: "/projects/airbnbclone.png",
-    tech: ["Next.js", "TypeScript", "Tailwind", "Redux", "GraphQL"],
-    inProgress: true,
-  },
   {
     title: "Restaurant Management System (In Progress)",
     description:
       "A full-stack system for restaurant operations with Next.js frontend and Django backend.",
     image: "/projects/restaurantmanagementsys.png",
     tech: ["Next.js", "Django", "PostgreSQL"],
+    inProgress: true,
+  },
+  {
+    title: "Library Management System (In Progress)",
+    description:
+      "A system to manage books, members, and loans, with admin dashboards.",
+    image: "/image.png",
     inProgress: true,
   },
 ];
@@ -64,6 +73,7 @@ export default function Projects() {
     live?: string;
     code?: string;
     inProgress?: boolean;
+    openInNewTab?: boolean;
   };
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
@@ -150,11 +160,21 @@ export default function Projects() {
               </h3>
               <p className='text-lg text-gray-400'>{project.description}</p>
               <div className='flex gap-4 justify-center md:justify-start pt-4'>
-                <button
-                  onClick={() => setSelectedProject(project)}
-                  className='px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition'>
-                  Live Demo
-                </button>
+                {project.openInNewTab ? (
+                  <a
+                    href={project.live}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition'>
+                    Live Demo
+                  </a>
+                ) : (
+                  <button
+                    onClick={() => setSelectedProject(project)}
+                    className='px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition'>
+                    Live Demo
+                  </button>
+                )}
                 <a
                   href={project.code}
                   target='_blank'
