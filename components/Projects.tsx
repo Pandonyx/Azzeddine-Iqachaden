@@ -60,7 +60,7 @@ const inProgress = [
     description:
       "A system to manage books, members, and loans, with admin dashboards.",
     image: "/projects/libms.jpg",
-    tech: ["Next.js", "Django",
+    tech: ["Next.js", "Django"],
     inProgress: true,
   },
 ];

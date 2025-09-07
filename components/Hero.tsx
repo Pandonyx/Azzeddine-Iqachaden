@@ -6,7 +6,7 @@ import SignatureImage from "./ui/SignatureImage";
 
 // 🎨 Solid background + text color pairs
 const colorPairs = [
-  { bg: "bg-white", text: "text-gray-900" },
+  { bg: "bg-indigo-200", text: "text-gray-900" },
   { bg: "bg-gray-100", text: "text-black" },
   { bg: "bg-gray-900", text: "text-white" },
   { bg: "bg-indigo-900", text: "text-white" },
