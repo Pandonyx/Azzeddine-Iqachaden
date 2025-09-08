@@ -40,7 +40,7 @@ const projects = [
       "A listings application showcasing deployed functionality and clean UI.",
     image: "/projects/airbnbclone.png",
     tech: ["Next.js", "TypeScript", "Tailwind"],
-    live: "https://alx-listing-app-deployed-muso93de7-pandonyxs-projects.vercel.app",
+    live: "https://alx-listing-app-272189.vercel.app/",
     code: "https://github.com/Pandonyx/alx-listing-app-deployed",
     openInNewTab: true,
   },
