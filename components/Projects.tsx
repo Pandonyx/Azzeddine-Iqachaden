@@ -34,16 +34,6 @@ const projects = [
     live: "https://elegantdining.vercel.app/",
     code: "https://github.com/Pandonyx/restaurantwebsitebasicstack",
   },
-  {
-    title: "ALX Listing App",
-    description:
-      "A listings application showcasing deployed functionality and clean UI.",
-    image: "/projects/airbnbclone.png",
-    tech: ["Next.js", "TypeScript", "Tailwind"],
-    live: "https://alx-listing-app-272189.vercel.app/",
-    code: "https://github.com/Pandonyx/alx-listing-app-deployed",
-    openInNewTab: true,
-  },
 ];
 
 const inProgress = [
