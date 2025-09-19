@@ -53,7 +53,7 @@ const projects: Project[] = [
     tech: ["React", "Vite", "TailwindCSS", "Axios"],
     live: "https://github-user-search-one-inky.vercel.app/",
     code: "https://github.com/Pandonyx/alx-fe-reactjs/tree/main/github-user-search",
-    openInNewTab: true,
+    openInNewTab: false,
   },
 ];
 
