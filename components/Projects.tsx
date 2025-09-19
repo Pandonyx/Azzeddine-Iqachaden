@@ -4,7 +4,18 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import Image from "next/image";
 
-const earlyWorks = [
+type Project = {
+  title: string;
+  description: string;
+  image: string;
+  tech?: string[];
+  live?: string;
+  code?: string;
+  inProgress?: boolean;
+  openInNewTab?: boolean;
+};
+
+const earlyWorks: Project[] = [
   {
     title: "Matrix-Inspired Portfolio",
     description:
@@ -25,7 +36,7 @@ const earlyWorks = [
   },
 ];
 
-const projects = [
+const projects: Project[] = [
   {
     title: "Elegance Dining Website",
     description: "A mock client website for a fine dining restaurant.",
@@ -34,9 +45,19 @@ const projects = [
     live: "https://elegantdining.vercel.app/",
     code: "https://github.com/Pandonyx/restaurantwebsitebasicstack",
   },
+  {
+    title: "GitHub User Search App",
+    description:
+      "An app to search for GitHub users and view their profiles using the GitHub API.",
+    image: "/projects/github-user-search.png",
+    tech: ["React", "Vite", "TailwindCSS", "Axios"],
+    live: "https://github-user-search-one-inky.vercel.app/",
+    code: "https://github.com/Pandonyx/alx-fe-reactjs/tree/main/github-user-search",
+    openInNewTab: true,
+  },
 ];
 
-const inProgress = [
+const inProgress: Project[] = [
   {
     title: "Restaurant Management System (In Progress)",
     description:
@@ -56,16 +77,6 @@ const inProgress = [
 ];
 
 export default function Projects() {
-  type Project = {
-    title: string;
-    description: string;
-    image: string;
-    tech?: string[];
-    live?: string;
-    code?: string;
-    inProgress?: boolean;
-    openInNewTab?: boolean;
-  };
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
